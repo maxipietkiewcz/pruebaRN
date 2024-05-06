@@ -15,4 +15,4 @@ function ListScreen({ navigation }) {
   );
 }
 
-export default DetailsScreen;
+export default ListScreen;
