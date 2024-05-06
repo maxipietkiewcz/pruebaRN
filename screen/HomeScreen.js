@@ -15,6 +15,7 @@ function HomeScreen({ navigation }) {
         title="Ir a detalles"
         onPress={() => navigation.navigate("Details")}
       />
+      <Button title="Ver lista" onPress={() => navigation.navigate("List")} />
     </View>
   );
 }
