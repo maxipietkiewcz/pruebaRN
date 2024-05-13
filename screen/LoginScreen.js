@@ -7,23 +7,31 @@ function LoginScreen({ navigation }) {
   const [password, setPassword] = useState("");
 
   const handleLogin = () => {
+    // Validación del correo electrónico
     if (!email.includes("@") || !email.includes(".") || email.length < 5) {
       alert("Correo electrónico no válido");
       return;
     }
 
+    // Validación del nombre de usuario (entre 3 y 15 caracteres)
     if (username.length < 3 || username.length > 15) {
-      alert(
-        "Nombre de usuario demasiado corto o demasiado largo (3-15 caracteres)"
-      );
+      alert("El nombre de usuario debe tener entre 3 y 15 caracteres");
       return;
     }
 
+    // Validación de la contraseña (entre 6 y 15 caracteres y sin caracteres especiales ni espacios)
     if (password.length < 6 || password.length > 15) {
-      alert("La contraseña debe tener al menos 6 caracteres y un maximo de 15");
+      alert("La contraseña debe tener entre 6 y 15 caracteres");
+      return;
+    } else if (
+      /[!@#$%^&*()_+={}\[\]:;"',.<>/?\\|~]/.test(password) ||
+      password.includes(" ")
+    ) {
+      alert("La contraseña no debe contener caracteres especiales ni espacios");
       return;
     }
 
+    // Si todas las validaciones pasan, navegar a la pantalla Home con el nombre de usuario como parámetro
     navigation.navigate("Home", { username });
   };
 
