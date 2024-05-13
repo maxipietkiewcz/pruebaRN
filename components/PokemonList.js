@@ -14,7 +14,7 @@ function PokemonList() {
         setIsLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching Pokemon data:", error);
+        console.error("Error en la petición", error);
         setIsLoading(false);
       });
   }, []);

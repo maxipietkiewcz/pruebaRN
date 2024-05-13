@@ -5,7 +5,6 @@ import PokemonList from "../components/PokemonList";
 function ListScreen({ navigation }) {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-      <Text>Lista de pokemons</Text>
       <PokemonList />
       <Button
         title="Volver a inicio"
