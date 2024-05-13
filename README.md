@@ -8,13 +8,13 @@ Ve a la ubicacion que deseas clonar el repositorio y en el cmd ejecuta el siguie
 git clone https://github.com/maxipietkiewcz/pruebaRN.git
 ```
 
-## Instala las dependecias
+## Instalar las dependecias
 
 ```
 npm install
 ```
 
-## Inicia el proyecto
+## Iniciar el proyecto
 
 ```
 npm run tunnel
